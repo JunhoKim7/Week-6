@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Elements</h1>
+   <script>
+       
+       const fruit = ["apple", "pear", "papaya"];
+        
+        function addToPage(content, index){
+            const number = index === undefined ? "" : index + 1;
+            const prefix = number === "" ? "" : number + " - ";
+            document.body.innerHTML += number + " - " + content + "<br>";
+            
+        // const d = document.createElement("div");
+            // d.innerText = `${index} - ${content}`;
+            // document.body.appendChild(d);
+        }
+        
+        function addListToPage(name, list){
+            addToPage(`<BR>===${name}===`);
+            list.forEach(addToPage);
+        }
+        
+        // addToPage("hello", 111);
+        // addToPage("goodbye", 222);
+
+        // fruit.forEach(addToPage);
+
+        // ["Jun", "Cheyanne", "Koda", "Hex"].forEach(addToPage);
+
+        addListToPage("FRUIT", fruit);
+        addListToPage("PEOPLE", ["Jun", "Cheyanne", "Koda", "Hex"]);
+   </script>
+    
+</body>
+
+</html>
