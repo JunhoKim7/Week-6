@@ -14,7 +14,7 @@
         function addToPage(content, index){
             const number = index === undefined ? "" : index + 1;
             const prefix = number === "" ? "" : number + " - ";
-            document.body.innerHTML += number + " - " + content + "<br>";
+            document.body.innerHTML += prefix + content + "<br>";
             
         // const d = document.createElement("div");
             // d.innerText = `${index} - ${content}`;
